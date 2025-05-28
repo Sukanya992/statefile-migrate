@@ -32,7 +32,7 @@ resource "google_compute_instance" "harness_vm" {
 }
 terraform {
   backend "gcs" {
-    bucket = "my-harness-tf-state"
+    bucket = "harness-migrate"
     prefix = "vm-instance/state"
   }
 }
