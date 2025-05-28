@@ -30,3 +30,9 @@ resource "google_compute_instance" "harness_vm" {
 
   tags = ["web"]
 }
+terraform {
+  backend "gcs" {
+    bucket = "my-harness-tf-state"
+    prefix = "vm-instance/state"
+  }
+}
